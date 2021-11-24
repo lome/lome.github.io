@@ -11,13 +11,15 @@
 } 
 
 html, body {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
+  padding:  0;
   overflow: hidden;
 }
 canvas {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display; block;
 }
 
@@ -88,10 +90,10 @@ a:active {
 
 .logo {
   position: absolute;
-  top: 20%;
+  top: 20vh;
   left:0;
   right:0;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -99,17 +101,17 @@ a:active {
 
 .turbo {
   font-family: "Aliens";
-  font-size: 24vh;
+  font-size: 20vw;
   display: block;
   color: white;
 }
 
 .claim {
   font-family: 'Streamster', cursive;
-  font-size: 16vh;
+  font-size: 14vw;
   display: block;
   color: yellow;
-  margin-top: -12vh;
+  margin-top: -12vw;
 }
 
 @keyframes flicker {
@@ -305,14 +307,13 @@ a:active {
   right:0;
   bottom: 0;
   width: 100%;
-  height: 20vh;
-  margin-left: 12vh;
-  margin-right: 12vh;
+  height: 22vmin;
   text-align: center;
-  padding: 2vh;
+  padding: 2vmin;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Press Start 2P', cursive;
+  font-size: 2vmin;
   color: white;
   animation: textbox-appear 5s;
 }
@@ -323,8 +324,8 @@ a:active {
   width: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top:  1vh;
-  margin-bottom: 1vh;
+  margin-top:  1vmin;
+  margin-bottom: 1vmin;
   animation: text-write 3s steps(60, end);
   animation-fill-mode: forwards;
 }

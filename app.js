@@ -113,6 +113,7 @@ scene.add(sun);
 
 var clock = new THREE.Clock();
 var time = 0;
+var resized = false;
 render();
 
 function render() {
@@ -133,8 +134,15 @@ function resize(renderer) {
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;
   const needResize = canvas.width !== width || canvas.height !== height;
-  if (needResize) {
+  if (needResize || resized) {
+    resized = false;
     renderer.setSize(width, height, false);
+    return true;
   }
   return needResize;
 }
+
+window.addEventListener('resize', () => {
+  console.log('Resized!');
+  resized = true;
+});
